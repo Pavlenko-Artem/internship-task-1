@@ -24,3 +24,6 @@ const concatAllTextFilesFromDir = (pathToDir = "") => {
   }
   return textFromFiles;
 }
+
+const text = concatAllTextFilesFromDir()
+fs.appendFileSync(path.resolve(__dirname, "bundle.txt"), text);
